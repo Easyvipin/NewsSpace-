@@ -6,7 +6,7 @@ const News = () => {
   return new Promise((resolve, reject) => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=us&apiKey=92c9aa4b54ae4bc7a74c5dda09987a37"
+        "https://newsapi.org/v2/top-headlines?country=us&apiKey=92c9aa4b54ae4bc7a74c5dda09987a37"
       )
       .then(resp => {
         resolve(resp);
