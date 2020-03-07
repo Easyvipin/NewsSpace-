@@ -8,11 +8,14 @@ html[data-theme="dark"] {
   --font: whitesmoke;
   --color-headings: #0077ff;
 }
-
 .banner {
-  background-image: url("/assets/image/banner.jpg");
+  background-image: url("/assets/image/today.jpg");
   background-position: center;
   background-attachment: fixed;
+}
+.container h1,
+p {
+  color: white;
 }
 /* toggler */
 input[type="checkbox"] {
@@ -56,9 +59,8 @@ input:checked + label:after {
 label:active:after {
   width: 45px;
 }
-body {
-  background-color: black;
-}
+
+/* news */
 .row {
   text-align: center;
   padding: 2%;
@@ -133,12 +135,4 @@ body {
     font-size: medium;
     color: white;
   }
-}
-
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  transition: all 750ms !important;
-  transition-delay: 0 !important;
 }

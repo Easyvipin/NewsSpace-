@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +26,9 @@
         <p>
           <a class="btn btn-primary btn-lg">Today news</a>
         </p>
+        <div class="toggle-container">
+          <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+      </div>
       </div>
     </div>
 
@@ -75,11 +78,31 @@
     </div>
     <footer>
     <div class="More-news ">
-      <a href="#" class="btn btn-info">Sports</a>
-      <a href="#" class="btn btn-info">Technology</a>
-      <a href="#" class="btn btn-info">Country news</a>
+      <a href="sports.html" class="btn btn-info">Sports</a>
+      <a href="tech.html" class="btn btn-info">Technology</a>
+      <a href="today.html" class="btn btn-info">Country news</a>
       </div>
     </footer>
+    <script>
+      let checkbox = document.querySelector('input[name=theme]');
+
+checkbox.addEventListener('change', function() {
+    if(this.checked) {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'light')
+    }
+})
+
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition')
+    }, 1000)
+}
+      </script>
     <script src="assets/script/script.js"></script>
   </body>
 </html>
